@@ -10,33 +10,13 @@ body{
 }
 
 
-/* Hero styles */
-
-.hero-banner div{
-    display: flex;
-    justify-content: center;
-    /* background-color: aliceblue; */
-
-}
-
-.hero-banner h2{
-    text-align: center;
-    background-color: var(--light-color);
-    display: inline-block;
-    padding: 3px 7px 3px 10px;
-    border-radius: 5px;
-    position: relative;
-    bottom: 10px;
-    box-shadow: 0px -2px 4px 0px #0a0012;
-}
-
 /* Header / nav styles */
 
 header{
     display: flex;
     justify-content: space-between;
     background-color: var(--mid-color);
-    box-shadow: #000000;
+    margin-bottom: 10px;
 }
 
 header h1{
@@ -54,6 +34,115 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #7315ba
+    color: #7315ba;
 }
+
+/* Hero styles */
+
+.hero-banner div{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-banner h2{
+    text-align: center;
+    background-color: var(--light-color);
+    display: inline-block;
+    padding: 3px 7px 3px 10px;
+    border-radius: 5px;
+    position: relative;
+    bottom: 17px;
+    box-shadow: 0px -2px 4px 0px #0a0012;
+}
+
+
+/* Main section styles */
+
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 5px;
+}
+
+/* About me section styles */
+
+section#about{
+    width: 35%;
+    background-color: rgba(162, 8, 245, 0.1);
+}
+
+/* Portfolio styles */
+
+section#work{
+    max-width: 60%;
+    background-color: rgba(171, 171, 171, 0.05);
+    margin: 0 auto;
+    padding: 15px;
+    height: 700px;
+    border-radius: 4px;
+    flex-grow: 2;
+}
+
+#work h2{
+    text-align: center;
+}
+
+
+
+#portfolio-grid-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 25% 25%;
+    grid-template-areas: 
+    "feature feature"
+    "image-2 image-3"
+    "image-4 image-5";
+    height: 95%;
+
+}
+
+#grid-feature-image{
+    grid-area: feature;
+    background-image: url(../images/Money.jpg);
+    margin-bottom: 1px
+}
+
+#grid-image-2{
+    grid-area: image-2;
+    background-image: url(../images/notes.jpg);
+}
+
+#grid-image-3{
+    grid-area: image-3;
+    background-image: url(../images/to-do.jpg);
+
+}
+
+#grid-image-4{
+    grid-area: image-4;
+    background-image: url(../images/letters.jpg);
+}
+
+#grid-image-5{
+    grid-area: image-5;
+    background-image: url(../images/Stars.jpg);
+
+}
+
+.grid-image{
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+
+
+
+
 
