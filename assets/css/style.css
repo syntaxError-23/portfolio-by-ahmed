@@ -45,6 +45,12 @@ nav ul li{
 
 nav ul li a{
     color: var(--text-color);
+    transition: all 0.1s ease-in;
+}
+
+nav ul li a:hover{
+    color: aliceblue;
+    font-size: 105%;
 }
 
 /* Hero styles */
@@ -92,6 +98,7 @@ section#about{
 
 #about h2{
     margin-bottom: 5px;
+    text-align: center;
 }
 
 #about p{
@@ -108,7 +115,9 @@ section#work{
     min-height: 700px;
     border-radius: 4px;
     flex-grow: 2;
-    box-shadow: var(--my-box-shadow)
+    box-shadow: var(--my-box-shadow);
+
+    
 }
 
 #work h2{
@@ -132,7 +141,7 @@ section#work{
 #grid-feature-image{
     grid-area: feature;
     background-image: url(../images/Money.jpg);
-    margin-bottom: 1px
+    margin-bottom: 1px;
 }
 
 #grid-image-2{
@@ -162,11 +171,45 @@ section#work{
     background-size: cover;
     background-position: center;
     width: 100%;
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 0px 0px 0px rgba(31, 0, 55, 0);
 }
 
 .grid-image:hover{
-    background-size: 105%;
+    transform: scale(1.01);
+    box-shadow: var(--my-box-shadow); 
+    background-position-y: 55%;
 }
+
+div.overlay{
+    opacity: 0%;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.1s ease-out;
+}
+
+div.overlay:hover{
+    opacity: 100%;
+}
+
+div.overlay a{
+    font-size: 1.5em;
+    stroke: solid 1px white;
+    color: rgb(109, 182, 245);
+    transition: all 0.15s ease-out;
+}
+
+div.overlay a:hover{
+    color: var(--text-color);
+    transform: scale(1.05);
+}
+
 
 /* Footer styles */
 
@@ -186,7 +229,7 @@ footer ul{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -237,7 +280,7 @@ main section{
 }
 
 section#about{
- margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 section#about h2{
