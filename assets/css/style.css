@@ -26,7 +26,7 @@ header h1{
 }
 
 header h1:after{
-    content: url(../images/avatar-icon.jpg);
+    content: url(../images/cropped-avatar.png);
     margin-left: 8px;
     position: relative;
     bottom: -5px;
@@ -44,7 +44,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 /* Hero styles */
@@ -85,7 +85,7 @@ section#about{
     width: 35%;
     background-color: rgba(162, 8, 245, 0.1);
     padding: 5px 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     border-radius: 4px;
     box-shadow: var(--my-box-shadow);
 }
@@ -164,6 +164,10 @@ section#work{
     width: 100%;
 }
 
+.grid-image:hover{
+    background-size: 105%;
+}
+
 /* Footer styles */
 
 footer{
@@ -194,8 +198,81 @@ footer.method-of-contact{
     color: var(--text-color);
 }
 
+/* -------------------- Media queries -------------------- */
+
+@media only screen and (max-width: 720px){
+
+/* Header styles */
+header{
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul{
+    margin: 0 auto;
+    padding: 0;
+}
 
 
+/* Hero banner styles */
+
+.hero-banner h2{
+    position: static;
+    margin-bottom: 10px;
+}
+
+/* Main section styles */
+
+main{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section{
+    min-width: 95%;
+    flex-grow: 1;
+    height: 80%;
+}
+
+section#about{
+ margin: 0 0 10px 0;
+}
+
+section#about h2{
+    text-align: center;
+}
+
+section#work h2{
+    margin-bottom: 10px;
+}
+
+#portfolio-grid-wrapper{
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"feature"
+"image-2"
+"image-3"
+"image-4"
+"image-5";
+min-height: 700px;
+}
 
 
+.grid-image{
+    min-height: 20%;
+}
 
+/* Footer styles */
+
+footer ul{
+    width: 100%;
+}
+
+footer p{
+    font-size: 0.6em;
+}
+
+}
